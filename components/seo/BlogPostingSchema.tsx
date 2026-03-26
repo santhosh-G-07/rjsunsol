@@ -1,4 +1,4 @@
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, toAbsoluteUrl } from "@/lib/site";
 import { ASSET_PATHS } from "@/lib/site-images";
 import type { BlogPost } from "@/lib/constants";
 
@@ -8,15 +8,13 @@ const PUBLISHER = {
   url: SITE_URL,
   logo: {
     "@type": "ImageObject" as const,
-    url: `${SITE_URL}${ASSET_PATHS.logo}`,
+    url: toAbsoluteUrl(ASSET_PATHS.logo),
   },
 };
 
 export default function BlogPostingSchema({ post }: { post: BlogPost }) {
   const url = `${SITE_URL}/blogs/${post.slug}`;
-  const imageUrl = post.heroImage.startsWith("http")
-    ? post.heroImage
-    : `${SITE_URL}${post.heroImage}`;
+  const imageUrl = toAbsoluteUrl(post.heroImage);
 
   const schema = {
     "@context": "https://schema.org",

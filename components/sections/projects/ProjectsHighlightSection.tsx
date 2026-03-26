@@ -4,10 +4,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { MapPin, ArrowUpRight } from "lucide-react";
+import { withBasePath } from "@/lib/site";
 
 const highlights = [
   {
-    image: "/images/solar-farms_solar-farm-sunset.webp",
+    image: withBasePath("/images/solar-farms_solar-farm-sunset.webp"),
     category: "Utility Scale",
     title: "Ground-Mount Solar Farm",
     description:
@@ -15,7 +16,7 @@ const highlights = [
     location: "Tamil Nadu",
   },
   {
-    image: "/images/civil-works_cable-laying-team.webp",
+    image: withBasePath("/images/civil-works_cable-laying-team.webp"),
     category: "Infrastructure",
     title: "Cable Laying & Civil Works",
     description:
@@ -23,7 +24,7 @@ const highlights = [
     location: "Andhra Pradesh",
   },
   {
-    image: "/images/installation_workers-install.webp",
+    image: withBasePath("/images/installation_workers-install.webp"),
     category: "Installation",
     title: "Panel Installation at Scale",
     description:
@@ -31,7 +32,7 @@ const highlights = [
     location: "Tamil Nadu",
   },
   {
-    image: "/images/civil-works_trench-team.webp",
+    image: withBasePath("/images/civil-works_trench-team.webp"),
     category: "Civil Works",
     title: "Trench & Foundation Works",
     description:

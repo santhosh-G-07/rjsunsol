@@ -2,11 +2,12 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { IMAGE_OVERLAY, HERO_MOTION } from "@/lib/constants";
+import { withBasePath } from "@/lib/site";
 import AdvancedParticles from "@/components/ui/AdvancedParticles";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import ImageWithSkeleton from "@/components/ui/ImageWithSkeleton";
 
-const BLOGS_HERO_IMAGE = "/images/solar-farms_solar-farm-golden.webp";
+const BLOGS_HERO_IMAGE = withBasePath("/images/solar-farms_solar-farm-golden.webp");
 
 export default function BlogsHeroSection() {
   const shouldReduceMotion = useReducedMotion();

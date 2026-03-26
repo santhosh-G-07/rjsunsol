@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
+import { withBasePath } from "@/lib/site";
 
 export default function ServicesIntroSection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
@@ -130,7 +131,7 @@ export default function ServicesIntroSection() {
             className="absolute inset-0 overflow-hidden rounded-[20px] border border-[rgba(var(--accent-rgb),0.15)] shadow-[0_40px_80px_rgba(0,0,0,0.5)]"
           >
             <Image
-              src="/images/installation_mounting-structure.webp"
+              src={withBasePath("/images/installation_mounting-structure.webp")}
               alt="Mounting structure installation"
               fill
               className="object-cover"
@@ -165,4 +166,3 @@ export default function ServicesIntroSection() {
     </section>
   );
 }
-

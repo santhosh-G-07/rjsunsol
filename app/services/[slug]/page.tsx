@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SERVICES_DATA } from "@/lib/constants";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, toAbsoluteUrl } from "@/lib/site";
 import ServiceDetailHero from "@/components/sections/services/detail/ServiceDetailHero";
 import ServiceOverviewSection from "@/components/sections/services/detail/ServiceOverviewSection";
 import ServiceFeaturesSection from "@/components/sections/services/detail/ServiceFeaturesSection";
@@ -21,9 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = SERVICES_DATA.find((s) => s.slug === params.slug);
   if (!service) return {};
   const url = `${SITE_URL}/services/${service.slug}`;
-  const imageUrl = service.heroImage.startsWith("http")
-    ? service.heroImage
-    : `${SITE_URL}${service.heroImage}`;
+  const imageUrl = toAbsoluteUrl(service.heroImage);
   return {
     title: `${service.title} | RJ Sunsol Green Energy`,
     description: service.description,

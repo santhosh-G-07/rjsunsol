@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import { IMAGE_OVERLAY } from "@/lib/constants";
+import { withBasePath } from "@/lib/site";
 
 const stats = [
   { value: 113, suffix: "+", unit: "MW", label: "Commissioned" },
@@ -26,7 +27,7 @@ export default function ProjectsStatsSection() {
     >
       <div className="pointer-events-none absolute inset-0">
         <Image
-          src="/images/solar-farms_solar-farm-golden.webp"
+          src={withBasePath("/images/solar-farms_solar-farm-golden.webp")}
           alt="Solar farm at golden hour, projects section background"
           fill
           className="object-cover"

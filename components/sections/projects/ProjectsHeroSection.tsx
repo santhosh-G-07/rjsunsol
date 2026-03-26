@@ -4,8 +4,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useMemo } from "react";
 import { IMAGE_OVERLAY, HERO_MOTION } from "@/lib/constants";
 import { ASSET_PATHS } from "@/lib/site-images";
-import { useReducedMotion } from "@/hooks/useReducedMotion";
 import ImageWithSkeleton from "@/components/ui/ImageWithSkeleton";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 export default function ProjectsHeroSection() {
   const shouldReduceMotion = useReducedMotion();
@@ -48,8 +48,8 @@ export default function ProjectsHeroSection() {
         }}
       >
         {shouldReduceMotion ? (
-          <ImageWithSkeleton
-            src="/images/hero-projects-page.webp"
+            <ImageWithSkeleton
+              src={ASSET_PATHS.heroProjectsPage}
             alt="Solar projects hero background"
             fill
             priority
@@ -70,8 +70,8 @@ export default function ProjectsHeroSection() {
                 repeatType: "reverse",
               }}
             >
-              <ImageWithSkeleton
-                src="/images/hero-projects-page.webp"
+                <ImageWithSkeleton
+                  src={ASSET_PATHS.heroProjectsPage}
                 alt="Solar projects hero background"
                 fill
                 priority

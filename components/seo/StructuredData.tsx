@@ -1,5 +1,5 @@
 import { ASSET_PATHS } from "@/lib/site-images";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, toAbsoluteUrl } from "@/lib/site";
 
 export function OrganizationSchema() {
   const schema = {
@@ -7,7 +7,7 @@ export function OrganizationSchema() {
     "@type": "Organization",
     "name": "RJ Sunsol Green Energy",
     "url": SITE_URL,
-    "logo": `${SITE_URL}${ASSET_PATHS.logo}`,
+    "logo": toAbsoluteUrl(ASSET_PATHS.logo),
     "description": "Leading solar EPC company in Tamil Nadu & Andhra Pradesh specializing in turnkey solar solutions for businesses across India",
     "address": {
       "@type": "PostalAddress",

@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { IMAGE_OVERLAY, HERO_MOTION } from "@/lib/constants";
 import { ASSET_PATHS } from "@/lib/site-images";
+import { withBasePath } from "@/lib/site";
 import AdvancedParticles from "@/components/ui/AdvancedParticles";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import ImageWithSkeleton from "@/components/ui/ImageWithSkeleton";
@@ -362,7 +363,7 @@ export default function HeroSection() {
               }}
             >
               <Image
-                src="/images/solar-farms_solar-farm-golden.webp"
+                src={withBasePath("/images/solar-farms_solar-farm-golden.webp")}
                 alt="Cable trench work"
                 fill
                 fetchPriority="high"
@@ -401,7 +402,7 @@ export default function HeroSection() {
               }}
             >
               <Image
-                src="/images/solar-farms_solar-farm-road.webp"
+                src={withBasePath("/images/solar-farms_solar-farm-road.webp")}
                 alt="Workers installing solar panels"
                 fill
                 sizes="(max-width: 1024px) 50vw, 320px"
@@ -472,4 +473,3 @@ export default function HeroSection() {
     </section>
   );
 }
-

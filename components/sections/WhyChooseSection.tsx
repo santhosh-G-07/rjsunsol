@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { withBasePath } from "@/lib/site";
 import {
   Layers,
   TrendingDown,
@@ -168,7 +169,7 @@ export default function WhyChooseSection() {
             >
               <Image
                 ref={primaryImgRef}
-                src="/images/solar-farms_solar-farm-dusk.webp"
+                src={withBasePath("/images/solar-farms_solar-farm-dusk.webp")}
                 alt="Solar farm at dusk"
                 fill
                 loading="lazy"
@@ -191,7 +192,7 @@ export default function WhyChooseSection() {
               className="absolute bottom-6 right-6 h-[40%] w-[52%] overflow-hidden rounded-[20px] border border-[rgba(var(--accent-rgb),0.4)] shadow-[0_24px_60px_rgba(0,0,0,0.6),0_0_0_1px_rgba(var(--accent-rgb),0.12)]"
             >
               <Image
-                src="/images/team_team-site.webp"
+                src={withBasePath("/images/team_team-site.webp")}
                 alt="Solar installation team on site"
                 fill
                 loading="lazy"
@@ -360,4 +361,3 @@ function FeatureCard({
     </motion.div>
   );
 }
-

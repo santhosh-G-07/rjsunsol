@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { BLOGS_DATA, type BlogPost } from "@/lib/constants";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, toAbsoluteUrl } from "@/lib/site";
 import BlogDetailHero from "@/components/sections/blogs/BlogDetailHero";
 import BlogDetailContent from "@/components/sections/blogs/BlogDetailContent";
 import BlogDetailCTA from "@/components/sections/blogs/BlogDetailCTA";
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = BLOGS_DATA.find((p) => p.slug === params.slug);
   if (!post) return { title: "Blog | RJ Sunsol" };
   const url = `${SITE_URL}/blogs/${post.slug}`;
-  const imageUrl = post.heroImage.startsWith("http") ? post.heroImage : `${SITE_URL}${post.heroImage}`;
+  const imageUrl = toAbsoluteUrl(post.heroImage);
   return {
     title: post.title,
     description: post.excerpt,

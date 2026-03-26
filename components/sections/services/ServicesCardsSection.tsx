@@ -15,6 +15,7 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 import { SERVICES_DATA } from "@/lib/constants";
+import { withBasePath } from "@/lib/site";
 
 const HERO_IMAGE_BY_SLUG: Record<string, string> = Object.fromEntries(
   SERVICES_DATA.map((s) => [s.slug, s.heroImage]),
@@ -34,7 +35,7 @@ type Service = {
 const SERVICES: Service[] = [
   {
     slug: "epc-services",
-    image: HERO_IMAGE_BY_SLUG["epc-services"] ?? "/images/installation_hero-construction.webp",
+    image: HERO_IMAGE_BY_SLUG["epc-services"] ?? withBasePath("/images/installation_hero-construction.webp"),
     number: "01",
     icon: Cpu,
     category: "Engineering",
@@ -47,7 +48,7 @@ const SERVICES: Service[] = [
     slug: "installation-commissioning",
     image:
       HERO_IMAGE_BY_SLUG["installation-commissioning"] ??
-      "/images/installation_workers-install.webp",
+      withBasePath("/images/installation_workers-install.webp"),
     number: "02",
     icon: Wrench,
     category: "Installation",
@@ -60,7 +61,7 @@ const SERVICES: Service[] = [
     slug: "project-management",
     image:
       HERO_IMAGE_BY_SLUG["project-management"] ??
-      "/images/civil-works_cable-laying-team.webp",
+      withBasePath("/images/civil-works_cable-laying-team.webp"),
     number: "03",
     icon: ClipboardList,
     category: "Management",
@@ -71,7 +72,7 @@ const SERVICES: Service[] = [
   },
   {
     slug: "service-maintenance",
-    image: HERO_IMAGE_BY_SLUG["service-maintenance"] ?? "/images/scada-panel.webp",
+    image: HERO_IMAGE_BY_SLUG["service-maintenance"] ?? withBasePath("/images/scada-panel.webp"),
     number: "04",
     icon: Activity,
     category: "Operations",
@@ -84,7 +85,7 @@ const SERVICES: Service[] = [
     slug: "residential-rooftop",
     image:
       HERO_IMAGE_BY_SLUG["residential-rooftop"] ??
-      "/images/installation_solar-panels-close.webp",
+      withBasePath("/images/installation_solar-panels-close.webp"),
     number: "05",
     icon: Home,
     category: "Residential",
@@ -95,7 +96,7 @@ const SERVICES: Service[] = [
   },
   {
     slug: "other-solar-services",
-    image: HERO_IMAGE_BY_SLUG["other-solar-services"] ?? "/images/weather-station.webp",
+    image: HERO_IMAGE_BY_SLUG["other-solar-services"] ?? withBasePath("/images/weather-station.webp"),
     number: "06",
     icon: Settings,
     category: "Specialized",
@@ -429,4 +430,3 @@ function ServiceCard({ service, index, debugId }: ServiceCardProps) {
     </motion.div>
   );
 }
-

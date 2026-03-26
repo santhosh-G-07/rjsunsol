@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
+import { withBasePath } from "@/lib/site";
 
 export default function AboutWhoWeAreSection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
@@ -155,7 +156,7 @@ export default function AboutWhoWeAreSection() {
             >
               <div className="relative h-full min-h-[480px] w-full overflow-hidden">
                 <Image
-                  src="/images/solar-farms_solar-farm-golden.webp"
+                  src={withBasePath("/images/solar-farms_solar-farm-golden.webp")}
                   alt="Solar farm golden hour"
                   fill
                   className="object-cover"
@@ -184,7 +185,7 @@ export default function AboutWhoWeAreSection() {
             >
               <div className="relative h-full min-h-[480px] w-full overflow-hidden">
                 <Image
-                  src="/images/team_team-site.webp"
+                  src={withBasePath("/images/team_team-site.webp")}
                   alt="RJ Sunsol team on site"
                   fill
                   className="object-cover object-top"
@@ -231,4 +232,3 @@ export default function AboutWhoWeAreSection() {
     </section>
   );
 }
-

@@ -5,7 +5,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { OrganizationSchema } from "@/components/seo/StructuredData";
 import { ASSET_PATHS } from "@/lib/site-images";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, toAbsoluteUrl } from "@/lib/site";
 import BackToTop from "@/components/ui/BackToTop";
 import CookieConsent from "@/components/ui/CookieConsent";
 
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: 'Industrial & Commercial Solar Energy Solutions | RJ Sunsol',
     description: 'Leading solar EPC company in Tamil Nadu & Andhra Pradesh. Turnkey solar solutions for businesses across India.',
     images: [{
-      url: ASSET_PATHS.logo,
+      url: toAbsoluteUrl(ASSET_PATHS.logo),
       width: 512,
       height: 512,
       alt: 'RJ Sunsol Green Energy - Solar EPC Solutions'
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'RJ Sunsol Green Energy | Solar EPC Solutions',
     description: 'Leading solar EPC company in Tamil Nadu & Andhra Pradesh. Turnkey solar solutions for businesses across India.',
-    images: [ASSET_PATHS.logo]
+    images: [toAbsoluteUrl(ASSET_PATHS.logo)]
   },
   robots: {
     index: true,

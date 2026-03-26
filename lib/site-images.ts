@@ -9,29 +9,31 @@
  */
 
 import { GALLERY_IMAGES } from "./gallery-images.generated";
+import { withBasePath } from "./site";
 
 // ─── Paths under public/ (no leading slash in key = path from public/)
 export const ASSET_PATHS = {
   // Brand & UI
-  logo: "/images/logo.webp",
-  favicon: "/thunder.png",
+  logo: withBasePath("/images/logo.webp"),
+  favicon: withBasePath("/thunder.png"),
 
   // Hero & section backgrounds
-  heroBgAerial: "/images/hero-bg-aerial.webp",
-  heroBgAerialMobile: "/images/hero-bg-aerial-mobile.webp",
-  sectionBgAbstract: "/images/section-bg-abstract.webp",
-  sectionBgBluehour: "/images/section-bg-bluehour.webp",
-  sectionBgGround: "/images/section-bg-ground.webp",
-  sectionBgNight: "/images/section-bg-night.webp",
-  contactHeroBg: "/images/contact-hero-bg.webp",
-  galleryHeroAerial: "/images/gallery-hero-aerial.webp",
+  heroBgAerial: withBasePath("/images/hero-bg-aerial.webp"),
+  heroBgAerialMobile: withBasePath("/images/hero-bg-aerial-mobile.webp"),
+  heroProjectsPage: withBasePath("/images/hero-projects-page.webp"),
+  sectionBgAbstract: withBasePath("/images/section-bg-abstract.webp"),
+  sectionBgBluehour: withBasePath("/images/section-bg-bluehour.webp"),
+  sectionBgGround: withBasePath("/images/section-bg-ground.webp"),
+  sectionBgNight: withBasePath("/images/section-bg-night.webp"),
+  contactHeroBg: withBasePath("/images/contact-hero-bg.webp"),
+  galleryHeroAerial: withBasePath("/images/gallery-hero-aerial.webp"),
 
   // Decorative / one-off (uses gallery image file from public/images/)
-  sunsetPanelsWide: "/images/solar-farms_sunset-panels-wide.webp",
+  sunsetPanelsWide: withBasePath("/images/solar-farms_sunset-panels-wide.webp"),
 
   // In public/images/ (no category prefix)
-  scadaPanel: "/images/scada-panel.webp",
-  weatherStation: "/images/weather-station.webp",
+  scadaPanel: withBasePath("/images/scada-panel.webp"),
+  weatherStation: withBasePath("/images/weather-station.webp"),
 } as const;
 
 /** Slugs that point to site assets (e.g. /images/) rather than gallery. Used by marquee and GALLERY_PATHS. */
@@ -49,7 +51,7 @@ function getGalleryPathBySlug(slug: string): { src: string; alt: string } {
   }
   const found = GALLERY_IMAGES.find((img) => img.src.endsWith(`_${slug}.webp`));
   if (found) return { src: found.src, alt: found.alt };
-  return { src: "/images/installation_hero-construction.webp", alt: slug };
+  return { src: withBasePath("/images/installation_hero-construction.webp"), alt: slug };
 }
 
 /** Marquee row 1 slugs (OUR WORK IN ACTION strip). */
@@ -92,22 +94,22 @@ const GALLERY_SIZE = { width: 800, height: 600 } as const;
 
 /** Projects page gallery: images from public/images. */
 export const PROJECTS_GALLERY_IMAGES: { src: string; alt: string; width: number; height: number }[] = [
-  { src: "/images/installation_hero-construction.webp", alt: "Hero construction", ...GALLERY_SIZE },
-  { src: "/images/installation_solar-panels-close.webp", alt: "Solar panels close", ...GALLERY_SIZE },
-  { src: "/images/installation_mounting-structure.webp", alt: "Mounting structure", ...GALLERY_SIZE },
-  { src: "/images/solar-farms_sunset-panels-wide.webp", alt: "Sunset panels wide", ...GALLERY_SIZE },
-  { src: "/images/team_team-site.webp", alt: "Team on site", ...GALLERY_SIZE },
-  { src: "/images/solar-farms_solar-farm-road.webp", alt: "Solar farm road", ...GALLERY_SIZE },
-  { src: "/images/installation_workers-install.webp", alt: "Workers installing", ...GALLERY_SIZE },
-  { src: "/images/installation_panel-blue-sky.webp", alt: "Panel blue sky", ...GALLERY_SIZE },
-  { src: "/images/civil-works_cable-trench.webp", alt: "Cable trench", ...GALLERY_SIZE },
-  { src: "/images/solar-farms_sunset-panels-close.webp", alt: "Sunset panels close", ...GALLERY_SIZE },
-  { src: "/images/solar-farms_solar-farm-sunset.webp", alt: "Solar farm sunset", ...GALLERY_SIZE },
-  { src: "/images/civil-works_cable-laying-team.webp", alt: "Cable laying team", ...GALLERY_SIZE },
-  { src: "/images/civil-works_trench-team.webp", alt: "Trench team", ...GALLERY_SIZE },
-  { src: "/images/solar-farms_solar-farm-golden.webp", alt: "Solar farm golden", ...GALLERY_SIZE },
-  { src: "/images/solar-farms_solar-farm-dusk.webp", alt: "Solar farm dusk", ...GALLERY_SIZE },
+  { src: withBasePath("/images/installation_hero-construction.webp"), alt: "Hero construction", ...GALLERY_SIZE },
+  { src: withBasePath("/images/installation_solar-panels-close.webp"), alt: "Solar panels close", ...GALLERY_SIZE },
+  { src: withBasePath("/images/installation_mounting-structure.webp"), alt: "Mounting structure", ...GALLERY_SIZE },
+  { src: withBasePath("/images/solar-farms_sunset-panels-wide.webp"), alt: "Sunset panels wide", ...GALLERY_SIZE },
+  { src: withBasePath("/images/team_team-site.webp"), alt: "Team on site", ...GALLERY_SIZE },
+  { src: withBasePath("/images/solar-farms_solar-farm-road.webp"), alt: "Solar farm road", ...GALLERY_SIZE },
+  { src: withBasePath("/images/installation_workers-install.webp"), alt: "Workers installing", ...GALLERY_SIZE },
+  { src: withBasePath("/images/installation_panel-blue-sky.webp"), alt: "Panel blue sky", ...GALLERY_SIZE },
+  { src: withBasePath("/images/civil-works_cable-trench.webp"), alt: "Cable trench", ...GALLERY_SIZE },
+  { src: withBasePath("/images/solar-farms_sunset-panels-close.webp"), alt: "Sunset panels close", ...GALLERY_SIZE },
+  { src: withBasePath("/images/solar-farms_solar-farm-sunset.webp"), alt: "Solar farm sunset", ...GALLERY_SIZE },
+  { src: withBasePath("/images/civil-works_cable-laying-team.webp"), alt: "Cable laying team", ...GALLERY_SIZE },
+  { src: withBasePath("/images/civil-works_trench-team.webp"), alt: "Trench team", ...GALLERY_SIZE },
+  { src: withBasePath("/images/solar-farms_solar-farm-golden.webp"), alt: "Solar farm golden", ...GALLERY_SIZE },
+  { src: withBasePath("/images/solar-farms_solar-farm-dusk.webp"), alt: "Solar farm dusk", ...GALLERY_SIZE },
   { src: GALLERY_PATHS.weatherStation, alt: "Weather station", ...GALLERY_SIZE },
   { src: GALLERY_PATHS.scadaPanel, alt: "SCADA panel", ...GALLERY_SIZE },
-  { src: "/images/solar-farms_moonrise-solar.webp", alt: "Moonrise solar", ...GALLERY_SIZE },
+  { src: withBasePath("/images/solar-farms_moonrise-solar.webp"), alt: "Moonrise solar", ...GALLERY_SIZE },
 ];

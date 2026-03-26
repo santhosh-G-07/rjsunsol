@@ -1,4 +1,5 @@
 import { GALLERY_PATHS } from "./site-images";
+import { withBasePath } from "./site";
 
 export const THEME = {
   // Switch accent color here to update the entire site
@@ -101,7 +102,7 @@ export const BLOGS_DATA = [
     date: "March 2026",
     datePublished: "2026-03-01",
     dateModified: "2026-03-01",
-    heroImage: "/images/blog-commercial-solar.webp",
+    heroImage: withBasePath("/images/blog-commercial-solar.webp"),
     cta: "Every day without solar is a day of untapped savings. A commercial solar assessment is the logical first step toward understanding the opportunity sitting on your roof.",
   },
   {
@@ -113,7 +114,7 @@ export const BLOGS_DATA = [
     date: "March 2026",
     datePublished: "2026-03-05",
     dateModified: "2026-03-05",
-    heroImage: "/images/blog-ongrid-offgrid.webp",
+    heroImage: withBasePath("/images/blog-ongrid-offgrid.webp"),
     cta: "Whether you're powering a family home, a remote cabin, or a commercial factory — solar energy starts with one simple choice: how connected do you want to be?",
   },
   {
@@ -125,7 +126,7 @@ export const BLOGS_DATA = [
     date: "March 2026",
     datePublished: "2026-03-10",
     dateModified: "2026-03-10",
-    heroImage: "/images/blog-epc-provider.webp",
+    heroImage: withBasePath("/images/blog-epc-provider.webp"),
     cta: "Evaluating solar for your facility? The first step is a thorough site and energy assessment conducted by a qualified EPC team. Reach out to us to understand what the right system for your facility looks like.",
   },
   {
@@ -137,7 +138,7 @@ export const BLOGS_DATA = [
     date: "March 2026",
     datePublished: "2026-03-15",
     dateModified: "2026-03-15",
-    heroImage: "/images/blog-facility-assessment.webp",
+    heroImage: withBasePath("/images/blog-facility-assessment.webp"),
     cta: "Want to know if your facility is a good candidate for solar? Our team conducts detailed feasibility assessments for commercial and industrial sites. Get in touch to schedule yours.",
   },
 ] as const;
@@ -151,8 +152,8 @@ export const SERVICES_DATA = [
     category: "Engineering",
     title: "EPC Services",
     subtitle: "Complete Engineering, Procurement & Construction",
-    heroImage: "/images/installation_hero-construction.webp",
-    overviewImage: "/images/solar-farms_solar-farm-golden.webp",
+    heroImage: withBasePath("/images/installation_hero-construction.webp"),
+    overviewImage: withBasePath("/images/solar-farms_solar-farm-golden.webp"),
     description:
       "We provide full-scope Engineering, Procurement, and Construction services for utility-scale and commercial solar projects — managing every stage from initial feasibility through to final commissioning.",
     longDescription:
@@ -209,8 +210,8 @@ export const SERVICES_DATA = [
     category: "Installation",
     title: "Installation & Commissioning",
     subtitle: "Precision Setup & Seamless Activation",
-    heroImage: "/images/installation_workers-install.webp",
-    overviewImage: "/images/installation_mounting-structure.webp",
+    heroImage: withBasePath("/images/installation_workers-install.webp"),
+    overviewImage: withBasePath("/images/installation_mounting-structure.webp"),
     description:
       "Our expert installation teams ensure precise, safe, and efficient solar system setup — from panel mounting and electrical works through to full grid commissioning and performance testing.",
     longDescription:
@@ -267,8 +268,8 @@ export const SERVICES_DATA = [
     category: "Management",
     title: "Project Management",
     subtitle: "Structured Coordination & Accountable Delivery",
-    heroImage: "/images/civil-works_cable-laying-team.webp",
-    overviewImage: "/images/civil-works_trench-team.webp",
+    heroImage: withBasePath("/images/civil-works_cable-laying-team.webp"),
+    overviewImage: withBasePath("/images/civil-works_trench-team.webp"),
     description:
       "Our dedicated project management capability ensures every solar project is delivered on schedule, within budget, and to the highest quality standards — with full transparency at every stage.",
     longDescription:
@@ -383,8 +384,8 @@ export const SERVICES_DATA = [
     category: "Residential",
     title: "Residential Rooftop Solar",
     subtitle: "Clean Energy for Every Home",
-    heroImage: "/images/installation_solar-panels-close.webp",
-    overviewImage: "/images/installation_panel-blue-sky.webp",
+    heroImage: withBasePath("/images/installation_solar-panels-close.webp"),
+    overviewImage: withBasePath("/images/installation_panel-blue-sky.webp"),
     description:
       "Affordable, high-quality rooftop solar systems designed for Indian homes — cutting electricity bills, enabling net metering, and delivering lasting value for families.",
     longDescription:
