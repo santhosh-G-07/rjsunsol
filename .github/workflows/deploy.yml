@@ -35,8 +35,7 @@ jobs:
 
       - name: Build static export
         env:
-          NEXT_PUBLIC_SITE_URL: https://santhosh-g-07.github.io/rjsunsol
-          NEXT_PUBLIC_BASE_PATH: /rjsunsol
+          NEXT_PUBLIC_SITE_URL: https://rjsunsol.com
         run: npm run build
 
       - name: Upload Pages artifact
