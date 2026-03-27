@@ -32,33 +32,55 @@ const bebasNeue = Bebas_Neue({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  applicationName: "RJ Sunsol Green Energy",
+  alternates: {
+    canonical: SITE_URL,
+  },
   title: {
-    default: 'Industrial & Commercial Solar Energy Solutions | Turnkey Solar Power | RJ Sunsol | EPC&OM',
-    template: '%s | RJ Sunsol Green Energy'
+    default: "RJ Sunsol Green Energy | Solar EPC Company in India",
+    template: "%s | RJ Sunsol Green Energy",
   },
   description:
-    "RJ Sunsol Green Energy is a solar EPC company specializing in turnkey solar solutions for businesses across India. Expanding from Tamil Nadu and Andhra Pradesh, we deliver comprehensive solar power systems nationwide, helping commercial and industrial clients reduce energy costs and achieve long-term sustainability goals.",
-  keywords: ['solar EPC', 'solar installation', 'Tamil Nadu solar', 'Andhra Pradesh solar', 'renewable energy', 'commercial solar', 'industrial solar', 'solar power systems', 'turnkey solar solutions', 'solar O&M'],
-  authors: [{ name: 'RJ Sunsol Green Energy' }],
+    "RJ Sunsol Green Energy (RJSunSol / RJ Sun Sol) is a solar EPC company delivering turnkey commercial, industrial, and residential solar solutions across India, including Tamil Nadu and Andhra Pradesh.",
+  keywords: [
+    "rjsunsol",
+    "rj sunsol",
+    "rj sun sol",
+    "RJ Sunsol Green Energy",
+    "solar EPC company in India",
+    "solar installation",
+    "turnkey solar solutions",
+    "commercial solar",
+    "industrial solar",
+    "residential rooftop solar",
+    "Tamil Nadu solar company",
+    "Andhra Pradesh solar company",
+    "solar O&M",
+  ],
+  authors: [{ name: "RJ Sunsol Green Energy" }],
   openGraph: {
-    type: 'website',
-    locale: 'en_IN',
+    type: "website",
+    locale: "en_IN",
     url: SITE_URL,
-    siteName: 'RJ Sunsol Green Energy',
-    title: 'Industrial & Commercial Solar Energy Solutions | RJ Sunsol',
-    description: 'Leading solar EPC company in Tamil Nadu & Andhra Pradesh. Turnkey solar solutions for businesses across India.',
-    images: [{
-      url: toAbsoluteUrl(ASSET_PATHS.logo),
-      width: 512,
-      height: 512,
-      alt: 'RJ Sunsol Green Energy - Solar EPC Solutions'
-    }]
+    siteName: "RJ Sunsol Green Energy",
+    title: "RJ Sunsol Green Energy | Solar EPC Company in India",
+    description:
+      "Turnkey commercial, industrial, and residential solar solutions across India from RJ Sunsol Green Energy.",
+    images: [
+      {
+        url: toAbsoluteUrl(ASSET_PATHS.logo),
+        width: 512,
+        height: 512,
+        alt: "RJ Sunsol Green Energy logo",
+      },
+    ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'RJ Sunsol Green Energy | Solar EPC Solutions',
-    description: 'Leading solar EPC company in Tamil Nadu & Andhra Pradesh. Turnkey solar solutions for businesses across India.',
-    images: [toAbsoluteUrl(ASSET_PATHS.logo)]
+    card: "summary_large_image",
+    title: "RJ Sunsol Green Energy | Solar EPC Company in India",
+    description:
+      "Turnkey commercial, industrial, and residential solar solutions across India from RJ Sunsol Green Energy.",
+    images: [toAbsoluteUrl(ASSET_PATHS.logo)],
   },
   robots: {
     index: true,
@@ -66,9 +88,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   icons: {
@@ -78,9 +100,9 @@ export const metadata: Metadata = {
 };
 
 export const viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
-  themeColor: '#1A1D27',
+  themeColor: "#1A1D27",
 } as const;
 
 export default function RootLayout({

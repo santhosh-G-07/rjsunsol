@@ -10,7 +10,7 @@ import AdvancedParticles from "@/components/ui/AdvancedParticles";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import ImageWithSkeleton from "@/components/ui/ImageWithSkeleton";
 
-const headlineLines = ["Powering India’s", "Clean Energy", "Future."];
+const headlineLines = ["Powering India's", "Clean Energy", "Future."];
 
 const MOBILE_BREAKPOINT = 768;
 
@@ -35,12 +35,12 @@ export default function HeroSection() {
     () =>
       Array.from({ length: 12 }).map((_, i) => ({
         id: i,
-        size: 3 + ((i * 7) % 4), // 3–6px
+        size: 3 + ((i * 7) % 4), // 3-6px
         color: i % 2 === 0 ? "bg-cobalt" : "bg-silver",
         top: `${10 + ((i * 7) % 70)}%`,
         left: `${5 + ((i * 13) % 90)}%`,
         reverse: i % 2 === 0,
-        duration: 4 + ((i * 3) % 5), // 4–8s
+        duration: 4 + ((i * 3) % 5), // 4-8s
       })),
     [],
   );
@@ -56,7 +56,7 @@ export default function HeroSection() {
     <section className="relative min-h-screen overflow-hidden pt-[76px]">
       {/* Background layers */}
       <div className="pointer-events-none absolute inset-0">
-        {/* Layer 1 – parallax image with Ken Burns (disabled when reduced motion) */}
+        {/* Layer 1 - parallax image with Ken Burns (disabled when reduced motion) */}
         {shouldReduceMotion ? (
           <div className="absolute inset-0">
             <ImageWithSkeleton
@@ -99,16 +99,16 @@ export default function HeroSection() {
           </motion.div>
         )}
 
-        {/* Layer 2 – cinematic gradient overlay */}
+        {/* Layer 2 - cinematic gradient overlay */}
         <div
           className="absolute inset-0"
           style={{ background: IMAGE_OVERLAY.hero }}
         />
 
-        {/* Layer 3 – noise texture via CSS class */}
+        {/* Layer 3 - noise texture via CSS class */}
         <div className="hero-noise absolute inset-0" />
 
-        {/* Layer 4 – bottom fade */}
+        {/* Layer 4 - bottom fade */}
         <div
           className="absolute inset-0"
           style={{ background: "var(--gradient-bottom-fade)" }}
@@ -167,6 +167,8 @@ export default function HeroSection() {
             initial="hidden"
             animate="visible"
           >
+            <h1 className="sr-only">RJ Sunsol Green Energy - Solar EPC company in India</h1>
+
             {/* Eyebrow pill */}
             <motion.div
               variants={{
@@ -196,7 +198,7 @@ export default function HeroSection() {
                 }}
               />
               <span className="font-dmsans text-[13px] tracking-[0.04em]">
-                Trusted Solar EPC Company — 100+ MW Delivered
+                Trusted Solar EPC Company - 100+ MW Delivered
               </span>
             </motion.div>
 
@@ -262,8 +264,8 @@ export default function HeroSection() {
               className="mb-10 max-w-[520px] font-dmsans text-[clamp(16px,1.4vw,18px)] font-light leading-[1.75]"
               style={{ color: "var(--text-on-image)" }}
             >
-              Full-scope solar EPC solutions — from engineering and procurement
-              to installation, commissioning, and long-term O&amp;M — across
+              Full-scope solar EPC solutions - from engineering and procurement
+              to installation, commissioning, and long-term O&amp;M - across
               Tamil Nadu, Andhra Pradesh, and beyond.
             </motion.p>
 
@@ -313,13 +315,13 @@ export default function HeroSection() {
                   whileHover={{ x: 6 }}
                   transition={{ type: "tween", duration: 0.2 }}
                 >
-                  →
+                  {"->"}
                 </motion.span>
               </motion.a>
             </motion.div>
           </motion.div>
 
-          {/* Right content – floating cards (desktop) */}
+          {/* Right content ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ floating cards (desktop) */}
           <div className="relative hidden w-[380px] lg:block">
             <motion.div
               className="pointer-events-none absolute left-1/2 top-1/2 h-[320px] w-[320px] -translate-x-1/2 -translate-y-1/2 rounded-full"
@@ -334,7 +336,7 @@ export default function HeroSection() {
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             />
 
-            {/* Cable trench card — above-the-fold LCP candidate: eager load + high priority */}
+            {/* Cable trench card - above-the-fold LCP candidate: eager load + high priority */}
             <motion.div
               className="hero-card absolute left-0 top-10 h-[220px] w-[300px] overflow-hidden rounded-2xl border"
               style={{ borderColor: "var(--border-accent)", boxShadow: "var(--shadow-image)" }}
@@ -420,7 +422,7 @@ export default function HeroSection() {
                 }}
               >
                 <div className="font-rajdhani text-[12px] font-semibold uppercase tracking-[0.08em]" style={{ color: "var(--accent)" }}>
-                  ⚡ Active Projects
+                  Active Projects
                 </div>
                 <div className="font-dmsans text-[11px]" style={{ color: "var(--text-muted)" }}>
                   Tamil Nadu &amp; Andhra Pradesh
@@ -430,7 +432,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Trust indicators bar – centered */}
+        {/* Trust indicators bar - centered */}
         <div className="mt-8 flex w-full justify-center px-4 lg:mt-12">
           <motion.div
             variants={{
